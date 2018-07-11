@@ -1,4 +1,4 @@
-// Author: FirstName LastName
+// Author: Jailyn Washington
 var x, y, z;
 x = 10;
 y = x - 4;
