@@ -1,4 +1,4 @@
-//Author: FirstName LastName
+//Author: Jailyn Washington
 
 /******************************************************************************
                                    withoutEnd()

@@ -1,8 +1,14 @@
-// Author: FirstName LastName
-var readline = require("readline-sync");
+// Author: Jailyn Washington
+let readline = require("readline-sync");
 
 // global variables
-var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
+let firstName;
+let lastName;
+let momMaidenName;
+let cityBorn;
+let dreamCar;
+let street;
+let fantasyName;
 
 /******************************************************************************
                                   getNewFirstName()
@@ -13,7 +19,7 @@ var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 *******************************************************************************/
 
 function getNewFirstName() {
-
+  return firstName.substring(0,3) + lastName.substring(0,2).toLowerCase();
 }
 
 /******************************************************************************
@@ -25,7 +31,7 @@ function getNewFirstName() {
 *******************************************************************************/
 
 function getNewLastName() {
-
+  return momMaidenName.substring(0,2) + cityBorn.substring(0, 4).toLowerCase();
 }
 
 /******************************************************************************
@@ -36,7 +42,7 @@ function getNewLastName() {
 *******************************************************************************/
 
 function getTitle() {
-
+  return lastName.charAt(lastName.length - 1).toUpperCase() + lastName.charAt(lastName.length - 2) + lastName.charAt(lastName.length - 3) + dreamCar.toLowerCase();
 }
 
 /******************************************************************************
@@ -47,7 +53,7 @@ function getTitle() {
 *******************************************************************************/
 
 function getHonorific() {
-
+  return street;
 }
 
 /******************************************************************************
@@ -61,6 +67,23 @@ function getHonorific() {
 *******************************************************************************/
 
 function run() {
+
+console.log("");
+console.log("*****************************************************************");
+console.log("                Fantasy Name Generator                            ");
+console.log("*****************************************************************");
+console.log("");
+firstName = readline.question("Your First Name: ");
+lastName = readline.question("Your Last Name: ");
+momMaidenName = readline.question("Mom's Maiden name: ");
+cityBorn = readline.question("City you were Born: ");
+dreamCar = readline.question("Your Dream Car: ");
+street = readline.question("Street you live by: ");
+
+console.log("");
+console.log("************************************************************")
+console.log(getNewFirstName() + " " + getNewLastName() + ", " + getTitle() + " of " + getHonorific());
+console.log("************************************************************")
 
 }
 
